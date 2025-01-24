@@ -8,7 +8,7 @@ def index():
 
 @app.route("/Hola")
 def hola():
-    return "Hola, Mundo"
+    return "Hola, mundo"
 
 
 if __name__ == "__main__":
