@@ -1,0 +1,42 @@
+{% extends "layout2.html" %}
+
+{% block container%}
+<form action="/calcular" method="post"> 
+<div style="display: flex; justify-content: center; gap: 700px;"> 
+    
+    <div style="text-align: left;">
+        
+
+            <label>Nombre:</label>
+            <input type="text" name="nombre"><br>
+
+            <label>Compradores:</label>
+            <input type="text" name="cantCom"><br>
+            
+            <label>Tarjeta Cineco</label>
+            <input type="radio" id="si" name="Cineco" value="si">
+            <label for="si">Si</label>
+
+            <input type="radio" id="no" name="Cineco" value="no">
+            <label for="no">No</label><br>
+
+            <label>Boletos:</label>
+            <input type="text" name="cantBol"><br>
+            
+        
+    </div>
+    
+    <div style="text-align: left;">
+        <h3>Salidas:</h3>
+        <p>{{ salida }}</p>
+    </div>
+</div>
+<div>
+    <div style="text-align: center;">
+        <h3>Acciones:</h3>
+        <input type="submit" value="Procesar">
+        <input type="button" value="Salir" onclick="window.location.href='/'">
+    </div>
+</div>
+</form>
+{% endblock %}

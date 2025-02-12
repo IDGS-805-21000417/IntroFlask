@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block container%}
+<div style="display: flex; justify-content: center; gap: 900px;"> 
+    
+    <div style="text-align: left;">
+        <form action="/resultado" method="post"> 
+            <label>N1:</label>
+            <input type="text" name="n1"><br>
+            <label>N2:</label>
+            <input type="text" name="n2"><br>
+
+            <input type="radio" id="suma" name="opc" value="suma">
+            <label for="suma">Suma</label><br>
+
+            <input type="radio" id="resta" name="opc" value="resta">
+            <label for="resta">Resta</label><br>
+
+            <input type="radio" id="multi" name="opc" value="multi">
+            <label for="multi">Multiplicación</label><br>
+
+            <input type="radio" id="divi" name="opc" value="divi">
+            <label for="divi">División</label><br> 
+
+            <input type="submit" value="Calcular">
+        </form>
+    </div>
+    
+    <div style="text-align: left;">
+        <h3>Resultado:</h3>
+        <p>{{ resultado }}</p>
+    </div>
+
+</div>
+{% endblock %}
